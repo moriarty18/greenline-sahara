@@ -150,7 +150,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-card to-background border border-white/10 rounded-xl p-4 flex flex-col items-center text-center gap-3">
             <div className="flex items-center gap-2 mb-1">
               <Smartphone className="w-5 h-5 text-primary" />
-              <h3 className="font-display font-bold text-white text-sm">{t('app.title')}</h3>
+              <h2 className="font-display font-bold text-white text-sm">{t('app.title')}</h2>
             </div>
             
             <div className="grid grid-cols-2 gap-3 w-full">
