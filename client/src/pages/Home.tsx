@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { BatteryCharging, MapPin, Smartphone, Zap, Navigation, MessageCircle } from "lucide-react";
+import { Link } from "wouter";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -175,12 +176,49 @@ export default function Home() {
               </a>
             </div>
           </div>
+
+          {/* About Section - Added for Google Ads Content Requirements */}
+          <div className="space-y-4 pt-4">
+            <h2 className="text-xl font-display font-bold text-white">About Greenline Sahara</h2>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Greenline Power Generation offers ultra-fast EV charging services at Sahara Centre, Sharjah. 
+              Our station features 6 state-of-the-art DC fast chargers capable of delivering up to 120kW of power, 
+              allowing you to charge your electric vehicle quickly while you shop or dine.
+            </p>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Located conveniently in Basement 1 Parking, our chargers support all major EV models with CCS2 and CHAdeMO connectors. 
+              Experience seamless charging with our mobile app, offering real-time availability, secure payments, and charging history.
+            </p>
+          </div>
+
+          {/* FAQ Section - Added for Google Ads Content Requirements */}
+          <div className="space-y-4 pt-4">
+            <h2 className="text-xl font-display font-bold text-white">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              <div className="bg-card/20 p-3 rounded-lg border border-white/5">
+                <h3 className="font-bold text-primary text-sm mb-1">Where is the station located?</h3>
+                <p className="text-xs text-gray-300">We are located in Sahara Centre, Sharjah, in the Basement 1 Parking area near the main entrance.</p>
+              </div>
+              <div className="bg-card/20 p-3 rounded-lg border border-white/5">
+                <h3 className="font-bold text-primary text-sm mb-1">How fast is the charging?</h3>
+                <p className="text-xs text-gray-300">Our DC fast chargers provide up to 120kW of power, capable of charging most EVs from 20% to 80% in under 30 minutes.</p>
+              </div>
+              <div className="bg-card/20 p-3 rounded-lg border border-white/5">
+                <h3 className="font-bold text-primary text-sm mb-1">How do I pay?</h3>
+                <p className="text-xs text-gray-300">Download the Greenline App (iOS/Android) to scan the QR code on the charger and pay securely via credit card or Apple Pay.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
 
-      {/* Minimal Footer */}
-      <footer className="py-4 text-center text-xs text-gray-600 border-t border-white/5 bg-black/20">
-        <p>© 2025 Greenline Power Generation</p>
+      {/* Footer with Privacy Link */}
+      <footer className="py-6 text-center text-xs text-gray-600 border-t border-white/5 bg-black/20 space-y-2">
+        <p>© 2025 Greenline Power Generation. All rights reserved.</p>
+        <div className="flex justify-center gap-4">
+          <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <a href="https://greenlinepg.ae" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Corporate Website</a>
+        </div>
       </footer>
     </div>
   );
