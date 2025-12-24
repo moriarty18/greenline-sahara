@@ -147,35 +147,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          {/* App Download Compact */}
-          <div className="bg-gradient-to-r from-card to-background border border-white/10 rounded-xl p-4 flex flex-col items-center text-center gap-3">
-            <div className="flex items-center gap-2 mb-1">
-              <Smartphone className="w-5 h-5 text-primary" />
-              <h2 className="font-display font-bold text-white text-sm">{t('app.title')}</h2>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-3 w-full">
-              <a 
-                href="https://apps.apple.com/ae/app/greenline-power/id6752994442" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center bg-white text-black px-2 py-2 rounded-lg hover:bg-gray-100 transition-colors gap-2"
-              >
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="Apple" className="w-4 h-4 invert" />
-                <span className="text-xs font-bold">App Store</span>
-              </a>
-              
-              <a 
-                href="https://play.google.com/store/apps/details?id=ae.greenlinepg.cp" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center bg-white/10 border border-white/20 text-white px-2 py-2 rounded-lg hover:bg-white/20 transition-colors gap-2"
-              >
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play" className="w-4 h-4" />
-                <span className="text-xs font-bold">Google Play</span>
-              </a>
-            </div>
-          </div>
+
 
           {/* About Section - Added for Google Ads Content Requirements */}
           <div className="space-y-4 pt-4">
@@ -212,13 +184,22 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer with Privacy Link */}
-      <footer className="py-6 text-center text-xs text-gray-600 border-t border-white/5 bg-black/20 space-y-2">
-        <p>© 2025 Greenline Power Generation. All rights reserved.</p>
-        <div className="flex justify-center gap-4">
+      {/* Footer with Legal Info */}
+      <footer className="py-8 text-center text-xs text-gray-500 border-t border-white/5 bg-black/20 space-y-4">
+        <div className="space-y-1">
+          <p className="font-bold text-gray-400">Greenline Power Generation Equipment Trading LLC</p>
+          <p>Office No. 184, The European Business Centre</p>
+          <p>Dubai Investment Park, Dubai, UAE</p>
+        </div>
+        
+        <div className="flex justify-center gap-6 flex-wrap px-4">
           <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link>
+          <Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
           <a href="https://greenlinepg.ae" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Corporate Website</a>
         </div>
+        
+        <p>© 2025 Greenline Power Generation. All rights reserved.</p>
       </footer>
     </div>
   );
